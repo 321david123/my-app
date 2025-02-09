@@ -2,26 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
+
+.hover-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.hover-card:hover {
+  @apply transform scale-105 shadow-2xl;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px theme("colors.blue.500");
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Global hover effect */
+a,
+button,
+.hover-effect {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+a:hover,
+button:hover,
+.hover-effect:hover {
+  @apply transform scale-105;
+}
+
+/* Card hover effect */
+.card {
+  @apply transition-all duration-300 ease-in-out bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.card:hover {
+  @apply shadow-xl transform scale-105;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+

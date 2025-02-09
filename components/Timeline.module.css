@@ -1,0 +1,4 @@
+.timelineCard {
+  @apply p-6 bg-white rounded-lg shadow-xl;
+}
+
