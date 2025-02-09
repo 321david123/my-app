@@ -13,7 +13,10 @@ export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
+    
     <Layout>
+        <title>Célula: Un Legado de Código e Innovación</title>
+        <link rel="icon" href="https://miguelin777.github.io/Clubdel100/assets/image/fix2.png" />
       <section className="relative min-h-screen flex items-center justify-center text-white">
         <CircuitBackgroundDynamic animationSpeed={0.5} />
         <div className="relative z-10 text-center space-y-8 py-20">
