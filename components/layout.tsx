@@ -26,7 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>Célula: Un Legado de Código e Innovación</title>
+        <title>Célula</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="bg-gray-900 text-white p-4">
