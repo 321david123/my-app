@@ -15,7 +15,7 @@ export default function Home() {
   return (
     
     <Layout>
-        <title>Célula: Un Legado de Código e Innovación</title>
+        <title>Célula</title>
         <link rel="icon" href="https://miguelin777.github.io/Clubdel100/assets/image/fix2.png" />
       <section className="relative min-h-screen flex items-center justify-center text-white">
         <CircuitBackgroundDynamic animationSpeed={0.5} />
