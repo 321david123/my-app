@@ -19,8 +19,8 @@ const teachers: Teacher[] = [
       "El Profesor Baeza proporcionó un apoyo y orientación invaluables, ayudando a cerrar la brecha entre teoría académica aplicación práctica.",
   },
   {
-    name: "Profesora Martínez",
-    role: "Especialista en Inteligencia Artificial",
+    name: "Administracion; Martínez",
+    role: "Apoyo",
     image: "/martinez.jpg",
     description:
       "La Profesora Martínez lideró la introducción de IA en el currículo Célula, inspirando a los estudiantes explorar las fronteras tecnología.",
@@ -40,12 +40,12 @@ export default function Teachers() {
             name="Justo72"
             role="Fundador y Líder Principal"
             image="/justo72.jpg"
-            description="El visionario fundador de Célula, Justo72 inspiró a generaciones estudiantes superar los límites la programación y innovación. Su liderazgo pasión por tecnología fueron fundamentales para el éxito del programa."
+            description="Fundador de Célula, Justo72 inspiró a generaciones de estudiantes para superar retos de programacion e innovación. Su liderazgo y pasión por la tecnología fueron fundamentales para el éxito de celula."
             achievements={[
               "Fundó Célula en 2005",
-              "Desarrolló un plan de estudios innovador que combina teoría y práctica",
-              "Mentor de más 500 estudiantes a lo largo 17 generaciones",
-              "Recibió el premio al Educador del Año en Tecnología 2015",
+              "Desarrolló un plan de estudios que combina teoría y práctica",
+              "Mentor de más 200 estudiantes a lo largo 17 generaciones",
+              "Instructor de Cisco Networking Academy",
             ]}
             quote="La verdadera innovación nace cuando nos atrevemos a desafiar los límites de lo posible."
           />
@@ -53,15 +53,15 @@ export default function Teachers() {
 
         <div className="rounded-lg shadow-xl overflow-hidden p-8 transition-all duration-300 ease-in-out bg-gray-100">
           <FeaturedProfessor
-            name="Dulce"
+            name="Dúlce"
             role="Co-Líder y Mentora Principal"
             image="/dulce.jpg"
-            description="Como la segunda figura más importante en Célula, Dulce jugó un papel crucial formación del plan de estudios y tutoría los estudiantes. Su enfoque resolución creativa problemas el trabajo equipo ha sido fundamental para éxito graduados Célula."
+            description="Como la segunda figura más importante en Célula, Dulce jugó un papel crucial formación del plan de estudios y tutoría los estudiantes. Su enfoque en resolución creativa e increíble comunicacion ha sido fundamental para Célula."
             achievements={[
-              "Co-desarrolló el programa de mentoría Célula",
-              "Lideró la iniciativa de proyectos sociales tecnológicos",
-              "Organizó las primeras hackathons internas de Célula",
-              "Reconocida como una de las 100 mujeres más influyentes en tecnología 2018",
+              "Co-desarrolló y apoyo el programa Célula",
+              "Lideró diferentes iniciativas de proyectos tecnológicos",
+              "Mentora de más de 100 estudiantes",
+              "Participaciones en diferentes conferencias y talleres",
             ]}
             quote="La tecnología es una herramienta poderosa, pero la creatividad y empatía lo que realmente cambia el mundo."
           />

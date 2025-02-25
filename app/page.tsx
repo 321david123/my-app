@@ -1,6 +1,7 @@
 'use client'
 import Layout from "../components/layout"
 import Link from "next/link"
+import Head from "next/head";
 import Closure from "../components/closure"
 import dynamic from "next/dynamic"
 import { motion } from "framer-motion"
@@ -15,18 +16,22 @@ export default function Home() {
   return (
     
     <Layout>
+        <Head>
         <title>Célula</title>
+        <link rel="icon" href="https://miguelin777.github.io/Clubdel100/assets/image/fix2.png" />
+      </Head>
         <link rel="icon" href="https://miguelin777.github.io/Clubdel100/assets/image/fix2.png" />
       <section className="relative min-h-screen flex items-center justify-center text-white">
         <CircuitBackgroundDynamic animationSpeed={0.5} />
         <div className="relative z-10 text-center space-y-8 py-20">
           <motion.h1
-            className="text-6xl font-bold leading-tight"
+            className="text-6xl font-bold font-sans leading-tight"
             initial={{ opacity: 0, y: 50 }}
+            font-family="sans-serif"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Célula: Un Legado de Código e Innovación
+            Célula
           </motion.h1>
           <motion.p
             className="text-xl max-w-2xl mx-auto"
@@ -34,7 +39,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Celebrando el viaje de un grupo élite de programación avanzada que dio forma al futuro de la tecnología.
+            Un review de nuestra historia y legado.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -56,8 +61,8 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-12">Nuestro Impacto</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Estudiantes Formados", value: "500+" },
-              { title: "Proyectos Realizados", value: "1000+" },
+              { title: "Estudiantes Formados", value: "200+" },
+              { title: "Proyectos Realizados", value: "30+" },
               { title: "Años de Innovación", value: "17" },
             ].map((stat, index) => (
               <motion.div
@@ -87,7 +92,7 @@ export default function Home() {
               { title: "Innovación", description: "Fomentando ideas revolucionarias" },
               { title: "Colaboración", description: "Trabajando juntos hacia el éxito" },
               { title: "Excelencia", description: "Persiguiendo los más altos estándares" },
-              { title: "Impacto", description: "Cambiando el mundo con código" },
+              { title: "Impacto", description: "Buscando soluciones a problemas reales" },
             ].map((pillar, index) => (
               <motion.div
                 key={index}
@@ -178,27 +183,33 @@ export default function Home() {
 
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Línea de Tiempo Interactiva</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Línea de Tiempo Resumen</h2>
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
-            {[2005, 2010, 2015, 2020, 2023].map((year, index) => (
-              <motion.div
-                key={year}
-                className="relative mb-8"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              >
-                <div className={`flex items-center ${index % 2 === 0 ? "flex-row-reverse" : ""}`}>
-                  <div className="w-5 h-5 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2"></div>
-                  <div className={`w-1/2 ${index % 2 === 0 ? "pr-8 text-right" : "pl-8"}`}>
-                    <h3 className="text-2xl font-bold mb-2">{year}</h3>
-                    <p className="text-gray-700">Hito importante en la historia de Célula</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+  <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+  {[
+    { year: 2005, text: "Célula was founded, marking the beginning of a new era." },
+    { year: 2010, text: "First major project launched, expanding our reach." },
+    { year: 2015, text: "Collaborations with leading tech innovators began." },
+    { year: 2020, text: "Global recognition achieved with milestone achievements." },
+    { year: 2024, text: "Future goals set to redefine industry standards." },
+  ].map((item, index) => (
+    <motion.div
+      key={item.year}
+      className="relative mb-8"
+      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+    >
+      <div className={`flex items-center ${index % 2 === 0 ? "flex-row-reverse" : ""}`}>
+        <div className="w-5 h-5 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2"></div>
+        <div className={`w-1/2 ${index % 2 === 0 ? "pr-8 text-right" : "pl-8"}`}>
+          <h3 className="text-2xl font-bold mb-2">{item.year}</h3>
+          <p className="text-gray-700">{item.text}</p>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
           <div className="text-center mt-12">
             <Link
               href="/linea-de-tiempo"

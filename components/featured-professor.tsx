@@ -36,7 +36,7 @@ export default function FeaturedProfessor({
           <h3 className="text-3xl font-bold mb-2">{name}</h3>
           <p className="text-xl text-gray-600 mb-4">{role}</p>
           <p className="text-gray-800 mb-6">{description}</p>
-          <h4 className="text-xl font-semibold mb-2">Logros destacados:</h4>
+          <h4 className="text-xl font-semibold mb-2">Puntos destacados:</h4>
           <ul className="list-disc list-inside mb-6">
             {achievements.map((achievement, index) => (
               <li key={index} className="text-gray-800">

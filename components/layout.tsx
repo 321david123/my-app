@@ -111,7 +111,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </header>
       <main className="flex-grow">{children}</main>
       <footer className="bg-gray-900 text-white p-4 text-center">
-        <p className="text-sm">&copy; {new Date().getFullYear()} Memorial Célula. Todos los derechos reservados.</p>
+        <p className="text-sm">&copy; {new Date().getFullYear()} Célula. Todos los derechos reservados.</p>
       </footer>
     </div>
   )
