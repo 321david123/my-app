@@ -58,8 +58,8 @@ export default function Home() {
 
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Nuestro Impacto</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-4xl font-bold font-sans text-center mb-12">Nuestro Impacto</h2>
+          <div className="grid grid-cols-1 font-sans md:grid-cols-3 gap-8">
             {[
               { title: "Estudiantes Formados", value: "200+" },
               { title: "Proyectos Realizados", value: "30+" },
@@ -85,8 +85,8 @@ export default function Home() {
       </section>
 
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Nuestros Pilares</h2>
+        <div className="container font-sans mx-auto px-4">
+          <h2 className="text-4xl font-bold font-sans text-center mb-12">Nuestros Pilares</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: "Innovación", description: "Fomentando ideas revolucionarias" },
@@ -113,30 +113,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-100 py-20">
+      <section className="bg-gray-100 font-sans py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Testimonios de Exalumnos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-4xl font-bold font-sans text-center mb-12">Testimonios de Exalumnos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
             {[
               {
-                name: "Ana García",
-                year: "2015",
-                quote: "Célula me dio las herramientas y la confianza para perseguir mis sueños en tecnología.",
+                name: "Anónimo",
+                year: "17",
+                quote: "Ser parte de célula me hizo crecer profesionalmente así como también crecer como persona y ser humano.",
               },
               {
-                name: "Carlos Rodríguez",
-                year: "2018",
-                quote: "La mentoría y el apoyo que recibí en Célula fueron fundamentales para mi carrera.",
-              },
-              {
-                name: "Laura Martínez",
-                year: "2020",
-                quote: "Célula no solo me enseñó a programar, sino pensar como una verdadera innovadora.",
-              },
+                name: "Juan Martin Arriaga Alejos",
+                year: "16",
+                quote: "Fue un lugar en el cual descubrí parte de mi pasión en esta vida. Dónde podía aprender siendo un niño todavía. Grandes experiencias vivi y recuerdos que se quedarán.",
+              }
             ].map((testimonial, index) => (
               <motion.div
                 key={index}
-                className={`bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out ${
+                className={`bg-white p-6 font-sans rounded-lg shadow-md transition-all duration-300 ease-in-out ${
                   hoveredIndex === index + 7 ? "shadow-2xl -translate-y-1" : ""
                 }`}
                 onMouseEnter={() => setHoveredIndex(index + 7)}
@@ -145,6 +140,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
+                
                 <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
                 <p className="text-right">
                   <span className="font-bold">{testimonial.name}</span>
@@ -154,44 +150,57 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Galería de Momentos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((index) => (
-              <motion.div
-                key={index}
-                className="relative h-64 rounded-lg overflow-hidden"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Image
-                  src={`https://placehold.co/384x256/1a1a2e/ffffff?text=Momento+Célula+${index}`}
-                  alt={`Momento Célula ${index}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 transform hover:scale-110"
-                />
-              </motion.div>
-            ))}
+        <div className="text-center mt-12">
+            <Link
+              href="/Testimonios"
+              className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300">
+              Ver todos los Testimonios
+            </Link>
           </div>
-        </div>
       </section>
+      <section className="py-20">
+  <div className="container mx-auto px-4">
+    <h2 className="text-4xl font-bold font-sans text-center mb-12">Galería de Momentos</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        { src: 'https://321david123.github.io/images/4.jpeg', alt: 'Momento Célula 1' },
+        { src: 'https://321david123.github.io/images/3.jpeg', alt: 'Momento Célula 2' },
+        { src: 'https://321david123.github.io/images/34.jpeg', alt: 'Momento Célula 3' },
+        { src: 'https://321david123.github.io/images/1222.jpeg', alt: 'Momento Célula 4' },
+        { src: 'https://321david123.github.io/images/12.jpeg', alt: 'Momento Célula 5' },
+        { src: 'https://321david123.github.io/images/2.jpeg', alt: 'Momento Célula 6' },
+      ].map((image, index) => (
+        <motion.div
+          key={index}
+          className="relative h-64 rounded-lg overflow-hidden"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            layout="fill"
+            objectFit="cover"
+            className="transition-transform duration-300 transform hover:scale-110"
+          />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Línea de Tiempo Resumen</h2>
+          <h2 className="text-4xl font-bold font-sans text-center mb-12">Línea de Tiempo Resumen</h2>
           <div className="relative">
-  <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+  <div className="absolute left-1/2 font-sans transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
   {[
-    { year: 2005, text: "Célula was founded, marking the beginning of a new era." },
-    { year: 2010, text: "First major project launched, expanding our reach." },
-    { year: 2015, text: "Collaborations with leading tech innovators began." },
-    { year: 2020, text: "Global recognition achieved with milestone achievements." },
-    { year: 2024, text: "Future goals set to redefine industry standards." },
+    { year: 2005, text: "Celula fue creado" },
+    { year: 2010, text: "Celula continua con su mejora de cursos y programas" },
+    { year: 2015, text: "Colaboraciones comienzan a dar luz" },
+    { year: 2020, text: "Proyectos han tenido exito en competencias internacionales" },
+    { year: 2023, text: "Ultima generacion de celula marcando limites" },
   ].map((item, index) => (
     <motion.div
       key={item.year}
@@ -222,35 +231,39 @@ export default function Home() {
       </section>
 
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Tecnologías que Dominamos</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              "React",
-              "Node.js",
-              "Python",
-              "Machine Learning",
-              "IoT",
-              "Blockchain",
-              "Cloud Computing",
-              "Mobile Development",
-            ].map((tech, index) => (
-              <motion.div
-                key={tech}
-                className="text-center"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="bg-gray-200 rounded-full w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl">🚀</span>
-                </div>
-                <h3 className="text-xl font-semibold">{tech}</h3>
-              </motion.div>
-            ))}
+  <div className="container font-sans mx-auto px-4">
+    <h2 className="text-4xl font-bold font-sans text-center mb-12">Tecnologías que Dominamos</h2>
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+      {[
+        { name: "Python", imgSrc: "https://321david123.github.io/images/python.png" },
+        { name: "Terminal", imgSrc: "https://321david123.github.io/images/terminal.png" },
+        { name: "Java", imgSrc: "https://321david123.github.io/images/java.png" },
+        { name: "SQL", imgSrc: "https://321david123.github.io/images/sql.png" },
+        { name: "Arduino", imgSrc: "https://321david123.github.io/images/arduino.png" },
+        { name: "Excel", imgSrc: "https://321david123.github.io/images/excel.png" },
+      ].map((tech, index) => (
+        <motion.div
+          key={tech.name}
+          className="text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          <div className="rounded-full w-30 h-40 mx-auto mb-4 flex items-center justify-center overflow-hidden">
+            <Image
+              src={tech.imgSrc}
+              alt={`${tech.name} logo`}
+              width={96}
+              height={96}
+              objectFit="contain"
+            />
           </div>
-        </div>
-      </section>
+          <h3 className="text-xl font-sans font-semibold">{tech.name}</h3>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       <Closure />
     </Layout>

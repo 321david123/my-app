@@ -32,10 +32,9 @@ export default function Teachers() {
 
   return (
     <div className="container mx-auto py-16 px-4">
-      <h2 className="text-4xl font-bold text-center mb-12">Nuestros Profesores Inspiradores</h2>
-
+      <h2 className="text-4xl font-bold text-center mb-12">Nuestros Profesores</h2>
       <div className="space-y-12 mb-12">
-        <div className="rounded-lg shadow-xl overflow-hidden p-8 transition-all duration-300 ease-in-out bg-gray-100">
+        <div className="">
           <FeaturedProfessor
             name="Justo72"
             role="Fundador y Líder Principal"
@@ -50,8 +49,7 @@ export default function Teachers() {
             quote="La verdadera innovación nace cuando nos atrevemos a desafiar los límites de lo posible."
           />
         </div>
-
-        <div className="rounded-lg shadow-xl overflow-hidden p-8 transition-all duration-300 ease-in-out bg-gray-100">
+        <div className="">
           <FeaturedProfessor
             name="Dúlce"
             role="Co-Líder y Mentora Principal"

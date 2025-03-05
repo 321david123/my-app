@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             Célula
           </Link>
           <nav className="hidden md:flex space-x-4">
-            {["Línea de Tiempo", "Profesores", "Generaciones", "Proyectos"].map((item) => (
+            {["Línea de Tiempo", "Profesores", "Proyectos"].map((item) => (
               <Link
                 key={item}
                 href={`/${item.toLowerCase().replace(/ /g, "-").replace(/í/g, "i")}`}
@@ -94,7 +94,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               variants={menuVariants}
               transition={{ duration: 0.5 }}
             >
-              {["Línea de Tiempo", "Profesores", "Generaciones", "Proyectos"].map((item, index) => (
+              {["Línea de Tiempo", "Profesores", "Proyectos"].map((item, index) => (
                 <motion.div key={item} variants={menuItemVariants} transition={{ duration: 0.5, delay: index * 0.1 }}>
                   <Link
                     href={`/${item.toLowerCase().replace(/ /g, "-").replace(/í/g, "i")}`}
