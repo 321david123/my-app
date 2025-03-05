@@ -16,6 +16,8 @@ const CircuitBackground: React.FC<{ animationSpeed?: number }> = ({ animationSpe
     let animationFrameId: number
     let particles: Particle[] = []
     const mouse = { x: 0, y: 0 }
+    // Detect touch device (mobile)
+    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0
 
     const resize = () => {
       canvas.width = window.innerWidth
@@ -40,6 +42,8 @@ const CircuitBackground: React.FC<{ animationSpeed?: number }> = ({ animationSpe
       }
 
       attractToMouse(mouseX: number, mouseY: number) {
+        // Skip on touch devices
+        if (isTouchDevice) return
         const dx = mouseX - this.x
         const dy = mouseY - this.y
         const distance = Math.sqrt(dx * dx + dy * dy)
@@ -99,17 +103,20 @@ const CircuitBackground: React.FC<{ animationSpeed?: number }> = ({ animationSpe
           }
         }
 
-        const dx = mouse.x - particles[i].x
-        const dy = mouse.y - particles[i].y
-        const distance = Math.sqrt(dx * dx + dy * dy)
+        // Skip mouse-to-particle lines on touch devices
+        if (!isTouchDevice) {
+          const dx = mouse.x - particles[i].x
+          const dy = mouse.y - particles[i].y
+          const distance = Math.sqrt(dx * dx + dy * dy)
 
-        if (distance < 120) {
-          ctx.strokeStyle = `rgba(0, 200, 255,${1 - distance / 120})`
-          ctx.lineWidth = 0.6
-          ctx.beginPath()
-          ctx.moveTo(mouse.x, mouse.y)
-          ctx.lineTo(particles[i].x, particles[i].y)
-          ctx.stroke()
+          if (distance < 120) {
+            ctx.strokeStyle = `rgba(0, 200, 255,${1 - distance / 120})`
+            ctx.lineWidth = 0.6
+            ctx.beginPath()
+            ctx.moveTo(mouse.x, mouse.y)
+            ctx.lineTo(particles[i].x, particles[i].y)
+            ctx.stroke()
+          }
         }
       }
 
@@ -117,20 +124,27 @@ const CircuitBackground: React.FC<{ animationSpeed?: number }> = ({ animationSpe
     }
 
     const handleMouseMove = (event: MouseEvent) => {
+      // Skip on touch devices
+      if (isTouchDevice) return
       const rect = canvas.getBoundingClientRect()
       mouse.x = event.clientX - rect.left
       mouse.y = event.clientY - rect.top
     }
 
+    // Only add mousemove listener on non-touch devices
+    if (!isTouchDevice) {
+      window.addEventListener("mousemove", handleMouseMove)
+    }
     window.addEventListener("resize", resize)
-    window.addEventListener("mousemove", handleMouseMove)
 
     resize()
     animate()
 
     return () => {
+      if (!isTouchDevice) {
+        window.removeEventListener("mousemove", handleMouseMove)
+      }
       window.removeEventListener("resize", resize)
-      window.removeEventListener("mousemove", handleMouseMove)
       cancelAnimationFrame(animationFrameId)
     }
   }, [animationSpeed])
@@ -145,4 +159,3 @@ const CircuitBackground: React.FC<{ animationSpeed?: number }> = ({ animationSpe
 }
 
 export default CircuitBackground
-
