@@ -12,18 +12,18 @@ interface Teacher {
 
 const teachers: Teacher[] = [
   {
-    name: "Profesor Baeza",
+    name: "Baeza",
     role: "Profesor de Apoyo",
     image: "/baeza.jpg",
     description:
       "El Profesor Baeza proporcionó un apoyo y orientación invaluables, ayudando a cerrar la brecha entre teoría académica aplicación práctica.",
   },
   {
-    name: "Administracion; Martínez",
+    name: "Erika",
     role: "Apoyo",
     image: "/martinez.jpg",
     description:
-      "La profesora ",
+      "Erika demostro y fue de gran ayuda para todo tipo de actividades dentro de celula, su apoyo fue fundamental para la convivencia sana.",
   },
 ]
 
@@ -32,7 +32,7 @@ export default function Teachers() {
 
   return (
     <div className="container mx-auto py-16 px-4">
-      <h2 className="text-4xl font-sans font-bold text-center mb-12">Nuestros Profesores</h2>
+      <h2 className="text-4xl font-bold text-center mb-12">Nuestros Profesores</h2>
       <div className="space-y-12 mb-12">
         <div className="">
           <FeaturedProfessor
@@ -68,6 +68,8 @@ export default function Teachers() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
         {teachers.map((teacher, index) => {
+          // Get initial from name (first character, uppercase)
+          const initial = teacher.name.charAt(0).toUpperCase()
           return (
             <div
               key={index}
@@ -78,14 +80,10 @@ export default function Teachers() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className="relative w-48 h-48 mx-auto mt-8">
-                <div className="absolute inset-0 bg-blue-500 rounded-full"></div>
-                <Image
-                  src={teacher.image || "/placeholder.svg"}
-                  alt={teacher.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
+                <div className="absolute inset-0 bg-blue-500 rounded-full flex items-center justify-center text-white text-4xl font-bold">
+                  {initial}
+                </div>
+                {/* Removed Image component, keeping structure for consistency */}
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-2xl font-bold mb-2">{teacher.name}</h3>

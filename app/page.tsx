@@ -23,7 +23,7 @@ export default function Home() {
         <CircuitBackgroundDynamic animationSpeed={0.5} />
         <div className="relative z-10 text-center space-y-8 py-20">
           <motion.h1
-            className="text-6xl font-bold font-sans leading-tight"
+            className="text-6xl font-bold leading-tight"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -60,8 +60,8 @@ export default function Home() {
 
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold font-sans text-center mb-12">Nuestro Impacto</h2>
-          <div className="grid grid-cols-1 font-sans md:grid-cols-3 gap-8">
+          <h2 className="text-4xl font-bold text-center mb-12">Nuestro Impacto</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: "Estudiantes Formados", value: "200+" },
               { title: "Proyectos Realizados", value: "30+" },
@@ -87,8 +87,8 @@ export default function Home() {
       </section>
 
       <section className="py-20">
-        <div className="container font-sans mx-auto px-4">
-          <h2 className="text-4xl font-bold font-sans text-center mb-12">Nuestros Pilares</h2>
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Nuestros Pilares</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: "Innovación", description: "Fomentando ideas revolucionarias" },
@@ -115,9 +115,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-100 font-sans py-20">
+      <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold font-sans text-center mb-12">Testimonios de Exalumnos</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Testimonios de Exalumnos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -133,7 +133,7 @@ export default function Home() {
             ].map((testimonial, index) => (
               <motion.div
                 key={index}
-                className={`bg-white p-6 font-sans rounded-lg shadow-md transition-all duration-300 ease-in-out ${
+                className={`bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out ${
                   hoveredIndex === index + 7 ? "shadow-2xl -translate-y-1" : ""
                 }`}
                 onMouseEnter={() => setHoveredIndex(index + 7)}
@@ -163,7 +163,7 @@ export default function Home() {
 
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold font-sans text-center mb-12">Galería de Momentos</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Galería de Momentos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { src: "https://321david123.github.io/images/4.jpeg", alt: "Momento Célula 1" },
@@ -195,9 +195,9 @@ export default function Home() {
 
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold font-sans text-center mb-12">Línea de Tiempo Resumen</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Línea de Tiempo Resumen</h2>
           <div className="relative">
-            <div className="absolute left-1/2 font-sans transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
             {[
               { year: 2005, text: "Celula fue creado" },
               { year: 2010, text: "Celula continua con su mejora de cursos y programas" },
@@ -233,8 +233,8 @@ export default function Home() {
       </section>
 
       <section className="py-20">
-        <div className="container font-sans mx-auto px-4">
-          <h2 className="text-4xl font-bold font-sans text-center mb-12">Tecnologías que Dominamos</h2>
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Tecnologías que Dominamos</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
               { name: "Python", imgSrc: "https://321david123.github.io/images/python.png" },
@@ -260,7 +260,7 @@ export default function Home() {
                     objectFit="contain"
                   />
                 </div>
-                <h3 className="text-xl font-sans font-semibold">{tech.name}</h3>
+                <h3 className="text-xl font-semibold">{tech.name}</h3>
               </motion.div>
             ))}
           </div>

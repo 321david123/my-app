@@ -45,7 +45,7 @@ export default function Testimonios() {
 
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold font-sans text-center mb-12">Todos los Testimonios</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Todos los Testimonios</h2>
           <div className="flex flex-col items-center gap-8">
             {testimonies.map((testimonial, index) => (
               <motion.div

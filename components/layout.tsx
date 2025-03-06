@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <header className="bg-gray-900 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <Link href="/" className="text-3xl font-bold font-sans hover:text-blue-400 transition-colors duration-300">
+          <Link href="/" className="text-3xl font-bold hover:text-blue-400 transition-colors duration-300">
             Célula
           </Link>
           <nav className="hidden md:flex space-x-4">

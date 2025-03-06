@@ -17,19 +17,18 @@ export default function FeaturedProfessor({
   achievements,
   quote,
 }: FeaturedProfessorProps) {
+  // Get initial from name (first character, uppercase)
+  const initial = name.charAt(0).toUpperCase()
+
   return (
     <div className="bg-white rounded-lg shadow-xl overflow-hidden p-8 mb-12 hover-card">
       <div className="flex flex-col md:flex-row items-center">
         <div className="md:w-1/3 mb-6 md:mb-0">
           <div className="relative w-64 h-64 mx-auto">
-            <div className="absolute inset-0 bg-blue-500 rounded-full"></div>
-            <Image
-              src={image || "/placeholder.svg"}
-              alt={name}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-full"
-            />
+            <div className="absolute inset-0 bg-blue-500 rounded-full flex items-center justify-center text-white text-4xl font-bold">
+              {initial}
+            </div>
+            {/* Removed Image component, keeping structure for consistency */}
           </div>
         </div>
         <div className="md:w-2/3 md:pl-8">
