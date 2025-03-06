@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Image from "next/image"
 import FeaturedProfessor from "./featured-professor"
 import { useState } from "react"
@@ -23,7 +23,7 @@ const teachers: Teacher[] = [
     role: "Apoyo",
     image: "/martinez.jpg",
     description:
-      "La Profesora Martínez lideró la introducción de IA en el currículo Célula, inspirando a los estudiantes explorar las fronteras tecnología.",
+      "La profesora ",
   },
 ]
 
@@ -32,7 +32,7 @@ export default function Teachers() {
 
   return (
     <div className="container mx-auto py-16 px-4">
-      <h2 className="text-4xl font-bold text-center mb-12">Nuestros Profesores</h2>
+      <h2 className="text-4xl font-sans font-bold text-center mb-12">Nuestros Profesores</h2>
       <div className="space-y-12 mb-12">
         <div className="">
           <FeaturedProfessor
@@ -46,7 +46,7 @@ export default function Teachers() {
               "Mentor de más 200 estudiantes a lo largo 17 generaciones",
               "Instructor de Cisco Networking Academy",
             ]}
-            quote="La verdadera innovación nace cuando nos atrevemos a desafiar los límites de lo posible."
+            quote="Los éxitos se ven desde la llanura"
           />
         </div>
         <div className="">
@@ -61,7 +61,7 @@ export default function Teachers() {
               "Mentora de más de 100 estudiantes",
               "Participaciones en diferentes conferencias y talleres",
             ]}
-            quote="La tecnología es una herramienta poderosa, pero la creatividad y empatía lo que realmente cambia el mundo."
+            quote="" // Quote removed for Dúlce
           />
         </div>
       </div>
@@ -99,4 +99,3 @@ export default function Teachers() {
     </div>
   )
 }
-

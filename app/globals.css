@@ -100,3 +100,8 @@ button:hover,
   font-size: 0.9rem;
 }
 
+.no-hover:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  transform: none !important;
+}

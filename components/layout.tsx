@@ -31,18 +31,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <header className="bg-gray-900 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <Link href="/" className="text-3xl font-bold font-serif hover:text-blue-400 transition-colors duration-300">
+          <Link href="/" className="text-3xl font-bold font-sans hover:text-blue-400 transition-colors duration-300">
             Célula
           </Link>
           <nav className="hidden md:flex space-x-4">
-            {["Línea de Tiempo", "Profesores", "Proyectos"].map((item) => (
-              <Link
+            {["Línea de Tiempo", "Profesores", "Testimonios", "Proyectos"].map((item) => (
+              <span
                 key={item}
-                href={`/${item.toLowerCase().replace(/ /g, "-").replace(/í/g, "i")}`}
-                className="hover:text-blue-400 transition-colors duration-300 text-lg font-semibold"
+                className={`${
+                  item === "Línea de Tiempo" || item === "Proyectos"
+                    ? "text-gray-500 cursor-not-allowed"
+                    : "hover:text-blue-400 transition-colors duration-300"
+                } text-lg font-semibold`}
               >
-                {item}
-              </Link>
+                {item === "Línea de Tiempo" || item === "Proyectos" ? (
+                  <span>{item}</span> // Non-clickable span for disabled items
+                ) : (
+                  <Link
+                    href={`/${item.toLowerCase().replace(/ /g, "-").replace(/í/g, "i")}`}
+                    className="block"
+                  >
+                    {item}
+                  </Link>
+                )}
+              </span>
             ))}
           </nav>
           <motion.button
@@ -94,15 +106,27 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               variants={menuVariants}
               transition={{ duration: 0.5 }}
             >
-              {["Línea de Tiempo", "Profesores", "Proyectos"].map((item, index) => (
+              {["Línea de Tiempo", "Profesores", "Testimonios", "Proyectos"].map((item, index) => (
                 <motion.div key={item} variants={menuItemVariants} transition={{ duration: 0.5, delay: index * 0.1 }}>
-                  <Link
-                    href={`/${item.toLowerCase().replace(/ /g, "-").replace(/í/g, "i")}`}
-                    className="block hover:text-blue-400 transition-colors duration-300 text-lg font-semibold"
-                    onClick={() => setIsMenuOpen(false)}
+                  <span
+                    className={`block ${
+                      item === "Línea de Tiempo" || item === "Proyectos"
+                        ? "text-gray-500 cursor-not-allowed"
+                        : "hover:text-blue-400 transition-colors duration-300"
+                    } text-lg font-semibold`}
                   >
-                    {item}
-                  </Link>
+                    {item === "Línea de Tiempo" || item === "Proyectos" ? (
+                      <span>{item}</span> // Non-clickable span for disabled items
+                    ) : (
+                      <Link
+                        href={`/${item.toLowerCase().replace(/ /g, "-").replace(/í/g, "i")}`}
+                        className="block"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item}
+                      </Link>
+                    )}
+                  </span>
                 </motion.div>
               ))}
             </motion.nav>
@@ -111,9 +135,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </header>
       <main className="flex-grow">{children}</main>
       <footer className="bg-gray-900 text-white p-4 text-center">
-        <p className="text-sm">&copy; {new Date().getFullYear()} Célula. Todos los derechos reservados.</p>
+        <p className="text-sm">© {new Date().getFullYear()} Célula. Todos los derechos reservados.</p>
       </footer>
     </div>
   )
 }
-

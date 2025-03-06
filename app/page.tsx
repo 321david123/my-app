@@ -152,7 +152,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/Testimonios"
+              href="/testimonios"
               className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300"
             >
               Ver todos los Testimonios
@@ -223,12 +223,11 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link
-              href="/linea-de-tiempo"
-              className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300"
+            <span
+              className="inline-block bg-gray-300 text-gray-500 px-8 py-3 rounded-full font-semibold cursor-not-allowed"
             >
               Ver Línea de Tiempo Completa
-            </Link>
+            </span>
           </div>
         </div>
       </section>

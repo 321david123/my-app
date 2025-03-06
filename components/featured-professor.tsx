@@ -44,10 +44,11 @@ export default function FeaturedProfessor({
               </li>
             ))}
           </ul>
-          <blockquote className="italic text-gray-600 border-l-4 border-blue-500 pl-4">"{quote}"</blockquote>
+          {quote && ( // Only render blockquote if quote exists
+            <blockquote className="italic text-gray-600 border-l-4 border-blue-500 pl-4">"{quote}"</blockquote>
+          )}
         </div>
       </div>
     </div>
   )
 }
-
