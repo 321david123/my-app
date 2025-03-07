@@ -85,35 +85,35 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Nuestros Pilares</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Innovación", description: "Fomentando ideas revolucionarias" },
-              { title: "Colaboración", description: "Trabajando juntos hacia el éxito" },
-              { title: "Excelencia", description: "Persiguiendo los más altos estándares" },
-              { title: "Impacto", description: "Buscando soluciones a problemas reales" },
-            ].map((pillar, index) => (
-              <motion.div
-                key={index}
-                className={`bg-gray-100 p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out ${
-                  hoveredIndex === index + 3 ? "shadow-2xl -translate-y-1" : ""
-                }`}
-                onMouseEnter={() => setHoveredIndex(index + 3)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
-                <p className="text-gray-700">{pillar.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto px-4">
+    <h2 className="text-4xl font-bold text-center mb-12">Nuestros Pilares</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { title: "Innovación", description: "Fomentando ideas revolucionarias", color: "#E0F7FA" }, // Light Blue
+        { title: "Colaboración", description: "Trabajando juntos hacia el éxito", color: "#E6F4EA" }, // Light Green
+        { title: "Excelencia", description: "Persiguiendo los más altos estándares", color: "#FDFDEA" }, // Light Gold
+        { title: "Impacto", description: "Buscando soluciones a problemas reales", color: "#ffc7c7" }, // Light Coral
+      ].map((pillar, index) => (
+        <motion.div
+          key={index}
+          className={`p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out ${
+            hoveredIndex === index + 3 ? "shadow-2xl -translate-y-1" : ""
+          }`}
+          style={{ backgroundColor: pillar.color }} // Apply the custom color
+          onMouseEnter={() => setHoveredIndex(index + 3)}
+          onMouseLeave={() => setHoveredIndex(null)}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
+          <p className="text-gray-700">{pillar.description}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4">
