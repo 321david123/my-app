@@ -34,6 +34,16 @@ export default function Testimonios() {
       year: "17",
       quote: "Al ser parte del programa célula lo que más valoro es el aprender sobre cómo formar parte de una comunidad o grupo estudiantil, siendo de gran ayuda para aprender a comunicarme y trabajar colaborativamente, ya sea por un objetivo en común dentro del campo de las STEM o por brindar ayuda en orientar a alguien a conseguir una meta, e incluso ser solidaria y tener un sentido de unión, aspectos fundamentales para reunir memorias y experiencias valiosas y muchas lecciones aprendidas que nos ayudan a subir peldaños en nuestras carreras o vidas, lo que se agradece como herramienta en diversos entornos, como el institucional o laboral, de manera que me hizo crecer no solo profesional sino también como humana.",
     },
+    {
+      name: "Jesús Jiménez",
+      year: "17",
+      quote: "Gracias a Celula, me formé como un mejor estudiante, cambié mi perspectiva de lo que es ser estudiante, gracias a eso estoy en la universidad que siempre quise estar, le doy las gracias a todo el equipo de Celula, pero en especial al maestro Justo 72.",
+    },
+    {
+      name: "Carlos Eduardo",
+      year: "17",
+      quote: "El haber estado en célula me hace sentir muy orgulloso, en célula logramos ampliar nuestro panorama y hacer cosas que no veíamos que pudiéramos lograr en la escuela, célula me dejó muchos conocimientos, pero también me dejó experiencias increíbles y grandes amistades con las cuales he crecido, estoy sumamente agradecido con los maestros por habernos dado la oportunidad de formar la última generación célula, los llevaré siempre en mi corazón.",
+    },
   ]
 
   return (
