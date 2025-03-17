@@ -63,7 +63,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-12">Nuestro Impacto</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Estudiantes Formados", value: "200+" },
+              { title: "Estudiantes Formados", value: "300+" },
               { title: "Proyectos Realizados", value: "30+" },
               { title: "Años de Innovación", value: "17" },
             ].map((stat, index) => (
