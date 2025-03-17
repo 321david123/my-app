@@ -44,6 +44,11 @@ export default function Testimonios() {
       year: "17",
       quote: "El haber estado en célula me hace sentir muy orgulloso, en célula logramos ampliar nuestro panorama y hacer cosas que no veíamos que pudiéramos lograr en la escuela, célula me dejó muchos conocimientos, pero también me dejó experiencias increíbles y grandes amistades con las cuales he crecido, estoy sumamente agradecido con los maestros por habernos dado la oportunidad de formar la última generación célula, los llevaré siempre en mi corazón.",
     },
+    {
+      name: "Grecia Márquez",
+      year: "17",
+      quote: "Cuando puse un pie en célula, me sentí como parte de, aparte de aprender sobre muchas cosas nuevas y conocer a gente muy linda",
+    },
   ]
 
   return (
