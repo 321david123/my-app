@@ -59,6 +59,11 @@ export default function Testimonios() {
       year: "XVI",
       quote: "Estar en célula para mí fue más que una enseñanza, fue algo muy bonito, algo que quedará para siempre.",
     },
+    {
+      name: "Jorge Abraham Ortega Chimal",
+      year: "XII",
+      quote: "Recuerdo cuando en sesiones de WER se sacaban unos chistes muy buenos y el compañerismo se notaba demasiado.",
+    },
   ]
 
   return (
