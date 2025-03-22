@@ -49,6 +49,11 @@ export default function Testimonios() {
       year: "17",
       quote: "Cuando puse un pie en célula, me sentí como parte de, aparte de aprender sobre muchas cosas nuevas y conocer a gente muy linda",
     },
+    {
+      name: "Fernando Acosta",
+      year: "X",
+      quote: "Célula fue una parte muy importante en mi etapa de Bachillerato. Hice muy buenas amistades y me ayudó a descubrir mi gusto por la programación, Justo 72 de los mejores profesores en mi vida.",
+    },
   ]
 
   return (
