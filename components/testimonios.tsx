@@ -54,6 +54,11 @@ export default function Testimonios() {
       year: "X",
       quote: "Célula fue una parte muy importante en mi etapa de Bachillerato. Hice muy buenas amistades y me ayudó a descubrir mi gusto por la programación, Justo 72 de los mejores profesores en mi vida.",
     },
+    {
+      name: "Anónimo",
+      year: "XVI",
+      quote: "Estar en célula para mí fue más que una enseñanza, fue algo muy bonito, algo que quedará para siempre.",
+    },
   ]
 
   return (
