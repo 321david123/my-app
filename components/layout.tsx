@@ -35,16 +35,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             Célula
           </Link>
           <nav className="hidden md:flex space-x-4">
-            {["Línea de Tiempo", "Profesores", "Testimonios", "Proyectos"].map((item) => (
+            {["Línea de Tiempo", "Profesores", "Testimonios", "Proyectos", "Galeria"].map((item) => (
               <span
                 key={item}
                 className={`${
-                  item === "Línea de Tiempo" || item === "Proyectos"
+                  item === "Línea de Tiempo" || item === "Proyectos" || item === "Galeria" // Disable links for these items
                     ? "text-gray-500 cursor-not-allowed"
                     : "hover:text-blue-400 transition-colors duration-300"
                 } text-lg font-semibold`}
               >
-                {item === "Línea de Tiempo" || item === "Proyectos" ? (
+                {item === "Línea de Tiempo" || item === "Proyectos" || item === "Galeria" ? (
                   <span>{item}</span> // Non-clickable span for disabled items
                 ) : (
                   <Link
@@ -106,16 +106,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               variants={menuVariants}
               transition={{ duration: 0.5 }}
             >
-              {["Línea de Tiempo", "Profesores", "Testimonios", "Proyectos"].map((item, index) => (
+              {["Línea de Tiempo", "Profesores", "Testimonios", "Proyectos", "Galeria"].map((item, index) => (
                 <motion.div key={item} variants={menuItemVariants} transition={{ duration: 0.5, delay: index * 0.1 }}>
                   <span
                     className={`block ${
-                      item === "Línea de Tiempo" || item === "Proyectos"
+                      item === "Línea de Tiempo" || item === "Proyectos" || item === "Galeria" // Disable links for these items
                         ? "text-gray-500 cursor-not-allowed"
                         : "hover:text-blue-400 transition-colors duration-300"
                     } text-lg font-semibold`}
                   >
-                    {item === "Línea de Tiempo" || item === "Proyectos" ? (
+                    {item === "Línea de Tiempo" || item === "Proyectos" || item === "Galeria"? (
                       <span>{item}</span> // Non-clickable span for disabled items
                     ) : (
                       <Link
