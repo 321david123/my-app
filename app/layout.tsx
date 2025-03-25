@@ -4,26 +4,25 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Célula | Comunidad de Programación en Cortazar, Gto",
-  description: "Célula es una comunidad avanzada de programación ubicada en Cortazar, Guanajuato, donde estudiantes desarrollan videojuegos, software y proyectos innovadores en equipo.",
+  title: "Célula | Historia",
+  description: "Célula es una comunidad avanzada de programación localizada en Cortazar, Guanajuato, donde estudiantes desarrollan software, proyectos y estudian con innovaciones en equipo.",
   keywords: [
     "Célula",
+    "Justo72",
     "Cortazar",
     "Guanajuato",
     "programación",
-    "videojuegos",
     "desarrollo de software",
-    "Justo72",
     "programadores jóvenes"
   ],
-  authors: [{ name: "Célula - Gen 17" }],
+  authors: [{ name: "Célula" }],
   robots: "index, follow",
   alternates: {
     canonical: "https://celula.mx/",
   },
   openGraph: {
-    title: "Célula | Comunidad de Programación en Cortazar, Gto",
-    description: "Comunidad avanzada de programación en Cortazar, donde los estudiantes aprenden, crean y comparten proyectos tecnológicos.",
+    title: "Célula | Historia",
+    description: "La historia de celula en una sola página.",
     url: "https://celula.mx/",
     siteName: "Célula",
     images: [
@@ -39,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Célula | Comunidad de Programación en Cortazar, Gto",
-    description: "Comunidad avanzada de programación en Cortazar, donde los estudiantes aprenden, crean y comparten proyectos tecnológicos.",
+    title: "Célula | Historia",
+    description: "La historia de celula en una sola página.",
     images: ["https://celula.mx/og-image.jpg"], // Replace with your actual image
   },
 };
