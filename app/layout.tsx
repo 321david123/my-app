@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Célula",
     images: [
       {
-        url: "https://celula.mx/og-image.jpg", // Replace with your actual image
+        url: "https://miguelin777.github.io/Clubdel100/assets/image/fix2.png", 
         width: 1200,
         height: 630,
         alt: "Célula Logo",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Célula | Historia",
     description: "La historia de celula en una sola página.",
-    images: ["https://celula.mx/og-image.jpg"], // Replace with your actual image
+    images: ["https://miguelin777.github.io/Clubdel100/assets/image/fix2.png"],
   },
 };
 
